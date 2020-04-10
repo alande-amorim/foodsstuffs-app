@@ -12,21 +12,26 @@ import {
   FoodAddIcon,
 } from './styles';
 
-import image from '../../assets/green-grapes.png';
-import shadow from '../../assets/food-shadow.png';
+// import image from '../../assets/green-grapes.png';
+// import shadow from '../../assets/food-shadow.png';
 
 export default function FoodItem({ data }) {
   return (
     <Container>
-      <FoodCategory>Fruits</FoodCategory>
+      <FoodCategory>{data.category}</FoodCategory>
 
-      <FoodImage source={image} />
+      <FoodImage resizeMode="cover" source={data.image.thumb} />
 
-      <FoodText>Raspberries</FoodText>
-      <FoodDescription>Lorem ipsum</FoodDescription>
+      <FoodText>{data.name}</FoodText>
+      <FoodDescription>{data.short_description}</FoodDescription>
 
       <Row>
-        <FoodPrice>$10.50</FoodPrice>
+        <FoodPrice>
+          {Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+          }).format(data.price)}
+        </FoodPrice>
         <FoodAddIcon name="add" size={20} color="#F00" />
       </Row>
     </Container>
