@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useNavigation } from '@react-navigation/native';
 import {
   Container,
   FoodCategory,
@@ -16,8 +17,14 @@ import {
 // import shadow from '../../assets/food-shadow.png';
 
 export default function FoodItem({ data }) {
+  const navigation = useNavigation();
+
+  function navigateToDetail() {
+    navigation.navigate('Detail');
+  }
+
   return (
-    <Container>
+    <Container onPress={navigateToDetail}>
       <FoodCategory>{data.category}</FoodCategory>
 
       <FoodImage resizeMode="cover" source={data.image.thumb} />

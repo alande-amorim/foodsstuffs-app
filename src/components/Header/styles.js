@@ -8,8 +8,12 @@ export const Container = styled.View`
 `;
 
 export const Button = styled.TouchableOpacity`
-  box-shadow: 0px 2px 4px rgba(25, 38, 73, 0.08); /*, -2px -2px 4px #ffffff, inset 1px 1px 5px rgba(24, 38, 72, 0.13), inset -2px -2px 5px #ffffff; */
   border-radius: 8px;
-  background: #fff;
   padding: 8px;
+  background: #fff;
+  border-style: solid;
+  border-top-color: #e9e9ee;
+  border-top-width: 2px;
+  border-left-color: #e9e9ee;
+  border-left-width: 1px;
 `;

@@ -1,7 +1,5 @@
 import styled from 'styled-components/native';
 import { Dimensions, ImageBackground } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import shadow from '../../assets/food-shadow.png';
 
 export const Container = styled.TouchableOpacity`
   padding: 0;
