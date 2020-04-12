@@ -4,6 +4,10 @@ export const Container = styled.View`
   position: absolute;
   bottom: 0;
   width: 100%;
+  background: #fff;
+  border-style: solid;
+  border-top-color: #cacbd8;
+  border-top-width: 1px;
 `;
 
 export const TabsContainer = styled.View`
@@ -13,10 +17,10 @@ export const TabsContainer = styled.View`
 `;
 
 export const TabItem = styled.TouchableOpacity`
-  padding: 20px;
+  padding: 25px 20px;
 `;
 
 export const Spacer = styled.View`
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 70px;
 `;

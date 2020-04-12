@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-import { View, Text, Image } from 'react-native';
 import { TouchableOpacity, FlatList } from 'react-native-gesture-handler';
+import Icon from 'react-native-vector-icons/Feather';
 
 import Header from '../../components/Header';
 import Tabs from '../../components/Tabs';
 import {
   Container,
+  Image,
   Content,
   DetailTitle,
   QuantitySelector,
   PriceContainer,
   Price,
   DetailDescription,
+  AddToCartContainer,
+  AddToCartBtn,
 } from './styles';
 
 import image from '../../assets/pink-macaroon-large.png';
@@ -58,9 +61,21 @@ export default function Detail() {
           A macaroon is a small cake or cookie, typically made from ground
           almonds, coconut or other nuts with sugar and sometimes flavorings,
           food coloring, glace cherries, jam or a chocolate coating – or a
-          combination of these or other ingredients
+          combination of these or other ingredients. A macaroon is a small cake
+          or cookie, typically made from ground almonds, coconut or other nuts
+          with sugar and sometimes flavorings, food coloring, glace cherries,
+          jam or a chocolate coating – or a combination of these or other
+          ingredients. A macaroon is a small cake or cookie, typically made from
+          ground almonds, coconut or other nuts with sugar and sometimes
+          flavorings, food coloring, glace cherries, jam or a chocolate coating
+          – or a combination of these or other ingredients.
         </DetailDescription>
       </Content>
+      <AddToCartContainer>
+        <AddToCartBtn>
+          <Icon name="plus" size={30} color="white" />
+        </AddToCartBtn>
+      </AddToCartContainer>
 
       <Tabs />
     </Container>

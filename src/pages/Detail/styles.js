@@ -7,10 +7,14 @@ export const Container = styled.View`
   justify-content: flex-end;
 `;
 
-export const Content = styled.View`
+export const Image = styled.Image``;
+export const Content = styled.ScrollView`
   flex: 1;
   box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.2);
   background: #fff;
+  /* position: absolute; */
+  bottom: 0;
+  height: 300px;
   padding: 30px;
   border-top-left-radius: 36px;
   border-top-right-radius: 36px;
@@ -54,4 +58,23 @@ export const DetailDescription = styled.Text`
   font-size: 14px;
   line-height: 26px;
   color: rgba(26, 31, 150, 0.42);
+`;
+
+export const AddToCartContainer = styled.View`
+  background: transparent;
+  position: absolute;
+  z-index: 5;
+  bottom: 10px;
+  align-self: center;
+  border-style: solid;
+  border-color: red;
+  /* border-width: 1px; */
+  padding: 5px;
+`;
+
+export const AddToCartBtn = styled.TouchableOpacity`
+  background: #ff7d64;
+  color: #fff;
+  padding: 30px;
+  border-radius: 100px;
 `;
